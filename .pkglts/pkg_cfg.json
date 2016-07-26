@@ -1,0 +1,58 @@
+{
+  "_pkglts": {
+    "auto_install": true, 
+    "install_front_end": "stdout", 
+    "use_prompts": false, 
+    "version": 3
+  }, 
+  "base": {
+    "authors": [
+      [
+        "revesansparole",
+        "revesansparole@gmail.com"
+      ]
+    ], 
+    "namespace": "openalea",
+    "pkgname": "provenance", 
+    "url": null
+  }, 
+  "coverage": {}, 
+  "coveralls": {}, 
+  "doc": {
+    "description": "Implementation of provenance for openalea workflows",
+    "keywords": []
+  }, 
+  "flake8": {}, 
+  "github": {
+    "owner": "openalea",
+    "project": "{{ base.pkgname }}", 
+    "url": "https://github.com/{{ github.owner }}/{{ github.project }}"
+  }, 
+  "landscape": {}, 
+  "license": {
+    "name": "cecill-c", 
+    "organization": "openalea",
+    "project": "{{ base.pkgname }}", 
+    "year": 2015
+  }, 
+  "pysetup": {
+    "intended_versions": [
+      "27"
+    ], 
+    "require": []
+  }, 
+  "readthedocs": {
+    "project": "{{ github.project }}"
+  }, 
+  "sphinx": {
+    "autodoc_dvlpt": true, 
+    "theme": "default"
+  }, 
+  "test": {}, 
+  "travis": {}, 
+  "version": {
+    "major": 0, 
+    "minor": 1, 
+    "post": 0
+  }
+}
