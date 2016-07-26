@@ -7,28 +7,41 @@ class Provenance(object):
     """
 
     def __init__(self):
-        pass
+        self.workflow = None
+        self.time_init = None
+        self.time_end = None
 
-    def before_eval(self, df, vid):
+    def init(self, dataflow):
+        """Initialize the provenance with a new dataflow
+
+        Args:
+            dataflow (CompositeNode): workflow currently under evaluation
+
+        Returns:
+            None
+        """
+        print "init prov", id(dataflow)
+
+    def before_eval(self, dataflow, vid):
         """Function called just before evaluating a node
 
         Args:
-            df (CompositeNode): workflow currently under evaluation
+            dataflow (CompositeNode): workflow currently under evaluation
             vid (vid): id of node to be evaluated
 
         Returns:
             None
         """
-        pass
+        print "bef eval", id(dataflow), vid
 
-    def after_eval(self, df, vid):
+    def after_eval(self, dataflow, vid):
         """Function called just after evaluating a node
 
         Args:
-            df (CompositeNode): workflow currently under evaluation
+            dataflow (CompositeNode): workflow currently under evaluation
             vid (vid): id of node to be evaluated
 
         Returns:
             None
         """
-        pass
+        print "aft eval", id(dataflow), vid
