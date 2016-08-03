@@ -190,11 +190,18 @@ class Provenance(object):
         Returns:
             (dict)
         """
+        data = []
+        for item in self._data:
+            clone = dict(item)
+            if clone['type'] == 'None':
+                clone['value'] = None
+            data.append(clone)
+
         pdef = dict(id=self._uid,
                     workflow=self._workflow.factory.uid,
                     time_init=self.time_init,
                     time_end=self.time_end,
-                    data=self._data,
+                    data=data,
                     parameters=self._parameters,
                     executions=self._executions)
 
